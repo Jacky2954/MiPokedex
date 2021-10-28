@@ -1,8 +1,8 @@
 const baseUrl = `https://pokeapi.co/api/v2/pokemon/`;
-const pokemon = document.getElementById('pokemonName');
-const buttonPokemon = document.getElementById('searchPokemon');
-const buttonClear = document.getElementById('clearPokemon');
-const appNode = document.getElementById('app');
+const pokemon = document.getElementById('pokemonName'); //-----Nombre o ID que se introduce en el buscador
+const buttonPokemon = document.getElementById('searchPokemon'); //----Botón de buscar(lupa)
+const buttonClear = document.getElementById('clearPokemon');//----Botón cancelar
+const appNode = document.getElementById('app');//---Nodo donde se insertan los pokemones
 
 buttonPokemon.addEventListener('click' , insertPokemon);
 buttonClear.addEventListener('click' , deletePokemons);
@@ -13,20 +13,20 @@ async function insertPokemon() {
     const res = await fetch(`${baseUrl}${pokemon.value.toLocaleLowerCase()}`)
     const pokemonDataJSON = await res.json()
 
-    const allItems = [];
-    const result = []; //*Guardaremos la respuesta en el array
+    const allItems = []; //Guardar toda la informacio´n de los pokemones
+    const result = []; //Guardar la respuesta en el array
 
-    for (let pokemonInfo in pokemonDataJSON) { //*Convertimos el objeto JSON a array
+    for (let pokemonInfo in pokemonDataJSON) { //Convertir el objeto JSON a array
       result.push([pokemonInfo , pokemonDataJSON[pokemonInfo]]);
     }
 
-    console.table(result); //! only for development
+    console.table(result);
 
-    //INFORMACIÓN INICIAL DE LA TARJETA
+    //INFORMACIÓN INICIAL DE LA TARJETA (toda información es sacada del array que muestra la consola)
 
     //imagen del pokemon
     const pokemonImage = document.createElement('img');
-    pokemonImage.src = result[14][1].front_default; 
+    pokemonImage.src = result[14][1].front_default;
 
     //nombre de pokemon e ID
     const pokemonName = document.createElement('h2');
@@ -37,7 +37,7 @@ async function insertPokemon() {
     pokemonType.innerText = `Type: ${result[16][1][0].type.name}`; 
 
 
-    // INFORMACIÓN POSTERIOR DE LA TARJETA
+    // INFORMACIÓN POSTERIOR DE LA TARJETA (toda información es sacada del array que muestra la consola)
 
     //HP
     const hp = document.createElement('p');
@@ -70,12 +70,12 @@ async function insertPokemon() {
     speed.classList.add('pokemonStats');
 
     //contenerdor de stats
-    const stats = document.createElement('div');
+    const stats = document.createElement('div'); //div guarda la información
     stats.append(hp, attack, defense, specialAttack, specialDefense, speed);
     stats.classList.add('pokemonStatsContainer');
 
     //crear contenedor
-    const container = document.createElement('div');
+    const container = document.createElement('div'); //div guarda la información
     container.append(pokemonImage , pokemonName ,pokemonType, stats);
     container.classList.add('container');
 
@@ -91,10 +91,10 @@ async function insertPokemon() {
 }
 
 function deletePokemons() {
-  let allPokemon = appNode.childNodes;
-  allPokemon = Array.from(allPokemon);
+  let allPokemon = appNode.childNodes; //lista de nodos
+  allPokemon = Array.from(allPokemon); //transformando una lista de nodos en un array
 
-  allPokemon.forEach(pokemon => {
+  allPokemon.forEach(pokemon => {  //cada pokemon que fue consultado serán removidos
     pokemon.remove(pokemon);
   });
 }
