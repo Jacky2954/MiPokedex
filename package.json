@@ -1,0 +1,23 @@
+{
+  "name": "MiPokedex",
+  "version": "1.0.0",
+  "description": "Proyecto Pokedex",
+  "main": "pokedata.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Jacky2954/MiPokedex.git"
+  },
+  "keywords": ["Pokedex"],
+  "author": "Jackeline Ulloa Barzola",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Jacky2954/MiPokedex/issues"
+  },
+  "homepage": "https://github.com/Jacky2954/MiPokedex#readme",
+  "dependencies": {
+    "cross-fetch": "^3.1.4"
+  }
+}

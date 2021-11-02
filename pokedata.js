@@ -13,7 +13,7 @@ async function insertPokemon() {
     const res = await fetch(`${baseUrl}${pokemon.value.toLocaleLowerCase()}`)
     const pokemonDataJSON = await res.json()
 
-    const allItems = []; //Guardar toda la informacio´n de los pokemones
+    const allItems = []; //Guardar toda la información de los pokemones
     const result = []; //Guardar la respuesta en el array
 
     for (let pokemonInfo in pokemonDataJSON) { //Convertir el objeto JSON a array
