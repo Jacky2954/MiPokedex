@@ -10,7 +10,9 @@
     "type": "git",
     "url": "git+https://github.com/Jacky2954/MiPokedex.git"
   },
-  "keywords": ["Pokedex"],
+  "keywords": [
+    "Pokedex"
+  ],
   "author": "Jackeline Ulloa Barzola",
   "license": "ISC",
   "bugs": {
