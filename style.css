@@ -2,10 +2,15 @@
   margin: 0;
 }
 
-/* img {
+.rounded{
   width: 56%;
-  padding: 20px; -------> Hace que el Pokemon sea grande
-}  */
+  padding: 20px;
+}
+
+img {
+  width: 20%;
+  padding: 20px;
+} 
 
 .hidden {
   opacity: 0;

@@ -26,7 +26,7 @@ async function insertPokemon() {
 
     //imagen del pokemon
     const pokemonImage = document.createElement('img');
-    pokemonImage.src = result[14][1].front_default;
+    pokemonImage.src = result[14][1].other.home.front_default;
 
     //nombre de pokemon e ID
     const pokemonName = document.createElement('h2');
