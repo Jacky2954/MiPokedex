@@ -1,4 +1,5 @@
 const baseUrl = `https://pokeapi.co/api/v2/pokemon/`;
+const pokemonContainer = document.querySelector(".pokemon-container");
 const pokemon = document.getElementById('pokemonName'); //-----Nombre o ID que se introduce en el buscador
 const buttonPokemon = document.getElementById('searchPokemon'); //----Botón de buscar(lupa)
 const buttonClear = document.getElementById('clearPokemon');//----Botón cancelar
@@ -23,17 +24,21 @@ async function insertPokemon() {
     console.table(result);
 
     //INFORMACIÓN INICIAL DE LA TARJETA (toda información es sacada del array que muestra la consola)
-
+    
     //imagen del pokemon
     const pokemonImage = document.createElement('img');
     pokemonImage.src = result[14][1].other.home.front_default;
 
-    //nombre de pokemon e ID
+    //nombre de pokemon
     const pokemonName = document.createElement('h2');
-    pokemonName.innerText = `Name: ${result[10][1]} - ID: ${result[6][1]}`; 
+    pokemonName.innerText = `${result[10][1].toUpperCase()}`; 
 
+    //ID Pokemon
+    const pokeID = document.createElement('h5');
+    pokeID.innerText = `ID: ${result[6][1]}`;
+    
     //tipo de pokemon
-    const pokemonType = document.createElement('h2');
+    const pokemonType = document.createElement('h5');
     pokemonType.innerText = `Type: ${result[16][1][0].type.name}`; 
 
 
@@ -76,7 +81,7 @@ async function insertPokemon() {
 
     //crear contenedor
     const container = document.createElement('div'); //div guarda la información
-    container.append(pokemonImage , pokemonName ,pokemonType, stats);
+    container.append(pokemonImage , pokemonName ,pokeID, pokemonType, stats);
     container.classList.add('container');
 
     allItems.push(container);
