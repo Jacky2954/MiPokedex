@@ -94,6 +94,7 @@ async function insertPokemon() {
   }
 
   document.querySelector('.poke-card').style.display = 'none';
+  
 }
 
 function deletePokemons() {
@@ -106,4 +107,24 @@ function deletePokemons() {
 
   document.querySelector('.poke-card').style.display = 'block';
 }
+
+
+// Scroll up
+
+document.getElementById("button-up").addEventListener("click", scrollUp);
+
+function scrollUp(){
+
+    var currentScroll = document.documentElement.scrollTop;
+
+    if (currentScroll > 0){
+        window.requestAnimationFrame(scrollUp);
+        window.scrollTo (0, currentScroll - (currentScroll / 10));
+    }
+}
+
+buttonUp = document.getElementById("button-up");
+
+
+
 
