@@ -15,7 +15,7 @@
 <body>
   <div class="container-fluid flex-center">
     <img src="./img/logo.png" alt="logo" class="rounded">
-    <small class="text-primary" color="$blue-600">¿Quién es ese Pokémon?</small>
+    <!-- <small class="text-primary" color="$blue-600">¿Quién es ese Pokémon?</small> -->
     <div class="search-container col-md-5 col-sm-5" id="search">
       <input type="text" class="form-control" id="pokemonName" placeholder="Buscar por nombre o ID">
       <button class="btn-search" id="searchPokemon">
@@ -27,15 +27,21 @@
         <span aria-hidden="true">&times;</span>
         <span class="sr-only">Close</span>
       </button>
-      <strong>Qué pena!</strong> no hay información de este pokémon :(
+      
     </div>
-    <br>
     <br>
     <div class="text-center">
       <button type="button" class="btn btn-danger" id="clearPokemon">TERMINAR CONSULTA</button>
     </div>
-
   </div>
+  <br>
+  <div data-poke-card class="poke-card">
+    <br>
+    <div pokemonName id="pokemonName">¿Quién es ese Pokémon?</div>
+    <div data-poke-img-container class="img-container">
+      <img data-poke-img class="poke-img" id="pokemonImage" src="./img/poke-shadow.png"/>
+      </div>
+    </div>
   <section class="pokemonData" id="app"></section>  
   <script src="./pokedata.js"></script>
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>

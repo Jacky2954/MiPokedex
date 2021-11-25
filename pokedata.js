@@ -1,5 +1,4 @@
 const baseUrl = `https://pokeapi.co/api/v2/pokemon/`;
-const pokemonContainer = document.querySelector(".pokemon-container");
 const pokemon = document.getElementById('pokemonName'); //-----Nombre o ID que se introduce en el buscador
 const buttonPokemon = document.getElementById('searchPokemon'); //----Botón de buscar(lupa)
 const buttonClear = document.getElementById('clearPokemon');//----Botón cancelar
@@ -25,13 +24,13 @@ async function insertPokemon() {
 
     //INFORMACIÓN INICIAL DE LA TARJETA (toda información es sacada del array que muestra la consola)
     
-    //imagen del pokemon
-    const pokemonImage = document.createElement('img');
-    pokemonImage.src = result[14][1].other.home.front_default;
-
     //nombre de pokemon
     const pokemonName = document.createElement('h2');
     pokemonName.innerText = `${result[10][1].toUpperCase()}`; 
+
+    //imagen del pokemon
+    const pokemonImage = document.createElement('img');
+    pokemonImage.src = result[14][1].other.home.front_default;
 
     //ID Pokemon
     const pokeID = document.createElement('h5');
@@ -39,7 +38,7 @@ async function insertPokemon() {
     
     //tipo de pokemon
     const pokemonType = document.createElement('h5');
-    pokemonType.innerText = `Type: ${result[16][1][0].type.name}`; 
+    pokemonType.innerText = `TYPE: ${result[16][1][0].type.name}`; 
 
 
     // INFORMACIÓN POSTERIOR DE LA TARJETA (toda información es sacada del array que muestra la consola)
@@ -81,7 +80,7 @@ async function insertPokemon() {
 
     //crear contenedor
     const container = document.createElement('div'); //div guarda la información
-    container.append(pokemonImage , pokemonName ,pokeID, pokemonType, stats);
+    container.append(pokemonName, pokemonImage, pokeID, pokemonType, stats);
     container.classList.add('container');
 
     allItems.push(container);
@@ -93,6 +92,8 @@ async function insertPokemon() {
     document.getElementById('show_error').classList.remove('hidden')
     return;
   }
+
+  document.querySelector('.poke-card').style.display = 'none';
 }
 
 function deletePokemons() {
@@ -102,5 +103,7 @@ function deletePokemons() {
   allPokemon.forEach(pokemon => {  //cada pokemon que fue consultado serán removidos
     pokemon.remove(pokemon);
   });
+
+  document.querySelector('.poke-card').style.display = 'block';
 }
 
