@@ -1,10 +1,15 @@
+# GitHubPage
+
+https://jacky2954.github.io/MiPokedex/
+
+
+
 # MiPokedex
 
-Descripción:Este POKEDEX tiene como objetivo generar una lista infinita de Pokemones que el usuario desea consultar ya sea por nombre o por el número de ID.
-GitHub Page: https://jacky2954.github.io/MiPokedex/
-
+Descripción: Este POKEDEX tiene como objetivo generar una lista infinita de Pokemones que el usuario desea consultar ya sea por nombre o por el número de ID.
 
 ![captura 1](https://user-images.githubusercontent.com/86697583/143469532-4d52538e-a269-4921-ab70-c93b94784a80.PNG)
+
 
 
 ## FUNCIONES
