@@ -6,7 +6,7 @@ https://jacky2954.github.io/MiPokedex/
 
 # MiPokedex
 
-Descripción: Este POKEDEX tiene como objetivo generar una lista infinita de Pokemones que el usuario desea consultar ya sea por nombre o por el número de ID.
+Descripción: Este POKEDEX tiene como objetivo generar una lista finita de Pokemones que el usuario desea consultar ya sea por nombre o por el número de ID.
 
 ![Captura1](https://user-images.githubusercontent.com/86697583/143808178-8ae369c5-546b-4585-83d9-0efb0dd6d02c.PNG)
 
