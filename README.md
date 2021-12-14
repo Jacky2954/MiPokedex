@@ -16,6 +16,8 @@ Descripción: Este POKEDEX tiene como objetivo generar una lista finita de Pokem
 
 Mostrar error: Cada vez que el usuario introduzca el nombre un pokemon no existente o este mal escrito.
 
+Botón terminar consulta: Desaparecer todas las tarjetas de pokemones consultados y volver a presentación inicial.
+
 ![Captura2](https://user-images.githubusercontent.com/86697583/143808245-f527daef-bd3c-445e-abc2-0f4880de42a6.PNG)
 
 
@@ -26,7 +28,7 @@ Mostrar tarjetas: Muestra tarjetas de pokemones que hayan sido buscados por su n
 
 
 
-Generar Lista: Se puede generar una lista infinita a partir de los pokemones consultados por el usuario.
+Generar Lista: Se puede generar una lista finita a partir de los pokemones consultados por el usuario.
 
 ![generar lista](https://user-images.githubusercontent.com/86697583/143533943-24712a0b-d72b-4743-b6b6-e82655cbe525.PNG)
 
